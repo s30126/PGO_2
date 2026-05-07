@@ -12,27 +12,42 @@ public class Ksiazka {
         this.dostepna = dostepna;
     }
 
-    public void wypiszInfo(Ksiazka ksiazka) {
-        System.out.println("Tytuł: " + ksiazka.tytul);
-        System.out.println("Autor: " + ksiazka.autor);
-        System.out.println("Liczba stron: " + ksiazka.liczbaStron);
-        System.out.println("Dostępna?: " + ksiazka.dostepna);
+    public String getTytul() {
+        return tytul;
     }
 
-    public boolean wypozycz(Ksiazka ksiazka) {
+    public boolean isDostepna() {
+        return dostepna;
+    }
+
+    public void wypiszInfo() {
+        System.out.println("Tytuł: " + tytul);
+        System.out.println("Autor: " + autor);
+        System.out.println("Liczba stron: " + liczbaStron);
+        System.out.println("Dostępna?: " + dostepna);
+    }
+
+    public boolean wypozycz() {
         if(dostepna) {
             dostepna = false;
         }
         return dostepna;
     }
 
-    public boolean zwroc(Ksiazka ksiazka) {
+    public boolean zwroc() {
         if(dostepna == false) {
             dostepna = true;
         }
         return dostepna;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Ksiazka{" +
+                "tytul='" + tytul + '\'' +
+                ", autor='" + autor + '\'' +
+                ", liczbaStron=" + liczbaStron +
+                ", dostepna=" + dostepna +
+                '}';
+    }
 }

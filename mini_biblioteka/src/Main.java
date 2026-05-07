@@ -7,17 +7,12 @@ public class Main {
         Ksiazka ksiazka2 = new Ksiazka("A Clash of Kings", "George R.R. Martin", 913, false);
         Ksiazka ksiazka3 = new Ksiazka("A Feast for Crows", "George R.R. Martin", 852, true);
 
-        ksiazka3.wypiszInfo(ksiazka3);
-        ksiazka3.wypozycz(ksiazka3);
-        ksiazka3.wypiszInfo(ksiazka3);
-
-        ksiazka1.wypiszInfo(ksiazka1);
-        ksiazka1.zwroc(ksiazka1);
-        ksiazka1.wypiszInfo(ksiazka1);
+        ksiazka3.wypozycz();
+        ksiazka1.zwroc();
 
 
 
-        /*Zadanie 2
+        //Zadanie 2
 
         Czytelnik czytelnik1 = new Czytelnik("Jan", "Kowalski", 123, 1);
         Czytelnik czytelnik2 = new Czytelnik("Anna", "Nowak", 456, 5);
@@ -30,7 +25,7 @@ public class Main {
         czytelnik2.zmniejszLiczbeWypozyczen(czytelnik2);
         czytelnik2.wypiszDane(czytelnik2);
 
-        */
+
 
         //Zadanie 3
 

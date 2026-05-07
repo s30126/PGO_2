@@ -17,18 +17,26 @@ public class Biblioteka {
 
     public void wypiszDostepneKsiazki() {
         for (Ksiazka ksiazka : ksiazki) {
-            System.out.println(ksiazka);
+            System.out.println(ksiazka.getTytul());
         }
     }
 
     public void znajdzKsiazkePoTytule(String tytul) {
-
+        for (Ksiazka k : ksiazki) {
+            if (k.getTytul() == tytul) {
+                System.out.println();
+            }
+        }
     }
 
-    /*
     public int policzDostepneKsiazki() {
-
+        int liczbaDostepnychKsiazek = 0;
+        for (Ksiazka k : ksiazki) {
+            if (k.isDostepna() == true) {
+                liczbaDostepnychKsiazek++;
+            }
+        }
+        return liczbaDostepnychKsiazek;
     }
-    */
 
 }
